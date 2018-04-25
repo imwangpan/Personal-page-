@@ -1,1 +1,2 @@
-# [个人主页](imwangpan.github.io)
+# 主页
+[个人主页](imwangpan.github.io)
