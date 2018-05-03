@@ -1,20 +1,165 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Hi！这是我的主页</title>
-	</head>
-	<body>
-		<h1>个人主页</h1>
-		<h2>个人介绍</h2>
-		<p>你好，欢迎访问我的个人主页，在这里你可以查看我的个人作品</p>
-		<h2>项目展示</h2>
-		<div id="">
-			<a href="">百度知道首页</a>
+<head>
+	<base target="_blank" />
+	<meta charset="utf-8" />
+	<title>imwangpan 的个人主页</title>
+	<link rel="stylesheet" type="text/css" href="CSS/javascript.fullPage.css" />
+	
+	<style>
+		/* Reset CSS
+		 * --------------------------------------- */
+		body,div,ul,li,h1,h2,p {
+		    padding: 0;
+		    margin: 0;
+		}
+		a{
+			text-decoration:none;
+			color: #FFFFFF;
+		}
+		a:hover{
+			text-shadow: 0 0 50px #000000;
+		}
+		ul {
+		    list-style: none;
+		}
+		h1,h2{
+		    font-weight: normal;
+		    font-size: 100%;
+		}
+
+
+		/* Custom CSS
+		 * --------------------------------------- */
+		body{
+			font-family: "微软雅黑";
+			color: #F2F2F2;
+		}
+		h1{
+			font-size: 6em;
+			color: #F2F2F2;
+		}
+		p{
+			font-size: 1.5em;
+			color: #F2F2F2;
+			opacity: 0.8;
+			padding-top: 50px;
+			width: 720px;
+			margin: 0 auto;
+			text-align: left;
+		}
+		.content{
+			position: relative;
+			top: 40%;
+			transform: translateY(-50%);
+			text-align: center;
+		}
+
+		/* Section 1
+		 * --------------------------------------- */
+		#section0{
+			background-color: #3b8df1;
+		}
+		#section0 .content{
+			top: 40%;
+		}
+		#section0 p{
+			padding-top: 50px;
+			width: 670px;
+			margin: 0 auto;
+			text-align: left;
+		}
+
+		/* Section 2
+		 * --------------------------------------- */
+		#section1{
+			background-color: #e93733;
+		}
+		#section1 .content{
+			top: 45%;
+		}
+
+		/* Section 3
+		 * --------------------------------------- */
+		#section2{
+			background-color: #fbb724;
+		}
+		#section2 .content{
+			top: 48%;
+		}
+		#section2 p{
+			opacity: 1;
+		}
+		
+		/* Section 4
+		* --------------------------------------- */
+		#section3{
+			background-color: #3ca759;
+		}
+		#section3 .content{
+			top: 49%;
+		}
+		#section3 ul{
+			font-size: 1.5em;
+			color: #F2F2F2;
+			opacity: 0.8;
+			width: 300px;
+			margin: 0 auto;
+			padding-top: 50px;
+			text-align: left;
+		}
+		#section3 ul li{
+			padding-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section " id="section0">		<!--滑动页-->
+			<div class="content">
+				<h1>Hello World</h1>
+				<p>欢迎访问我的个人主页，这是我的作品展示导航页面。</p>
+				<p>你可以通过向下滚动鼠标查看我的作品，为保证最佳显示效果，请使用 Chrome 浏览器。</p>
+			</div>
 		</div>
-		<div id="">
-			<a href="">网易严选</a>
+		<div class="section" id="section1">
+			<div class="content">
+				<h1><a href="https://imwangpan.github.io/baiduzhidao/百度知道首页（静态）.html">百度知道首页</a></h1>
+				<p>这是一个模仿百度知道首页的静态页面，主要用来练习页面布局以及熟悉样式设置。</p>
+				<p>主要知识点：根据网站设计图选择合理布局，标签语义化，盒模型，浮动，定位，表格、表单等 HTML、CSS 基础知识。</p>
+			</div>
 		</div>
-		<div id="">
-			<a href="">跟随鼠标移动的小狗</a>
+		<div class="section" id="section2">
+			<div class="content">
+				<h1><a href="">网易严选</a></h1>
+				<p>这是一个模仿网易严选的项目，页面方面包含了主页、产品详情页以及 404 页面。样式方面基本完整实现了网易严选改版前的页面样式。功能方面实现了该电商网站的基本交互功能。</p>
+				<p>本项目采用原生 JS 开发，所用的技术有：1、面向对象；2、组件开发；3、数据交互；4、URL 解析；5、本地存储等。</p>
+			</div>
 		</div>
-	</body>
+		<div class="section" id="section3">
+			<div class="content">
+				<h1>其它小作品</h1>
+				<ul>
+					<li><a href="">跟随鼠标移动的小狗</a></li>
+					<li><a href="">骰子（立方体）</a></li>
+					<li><a href="">轮播图（单图显示）</a></li>
+					<li><a href="">轮播图（多图显示）</a></li>
+					<li><a href="">占位1</a></li>
+					<li><a href="">占位2</a></li>
+					<li><a href="">占位3</a></li>
+					<li><a href="">占位4</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="JS/javascript.fullPage.js"></script>
+	<script type="text/javascript">
+		fullpage.initialize('#fullpage', {
+			anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+			menu: '#menu',
+			css3:true
+		});
+	</script>
+</body>
 </html>
